@@ -20,11 +20,13 @@ for(var i = 0; i < pacientes.length; i ++) {
     if(peso <= 0 || peso >= 1000) {
         pesoEhValido = false;
         tdPeso.textContent = 'Peso Inválido';
+        paciente.classList.add('paciente-invalido');
     }
 
     if(altura <= 0 || altura >= 3.00) {
         alturaEhValida = false;
         tdAltura.textContent = 'Altura Inválida';
+        paciente.classList.add('paciente-invalido');
     }
 
 
