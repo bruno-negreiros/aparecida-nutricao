@@ -16,10 +16,7 @@ botaoAdicionar.addEventListener('click', function(event) {
         return;
     }
 
-    var pacienteTr = montaTr(paciente);
-    var tabela = document.querySelector('#tabela-pacientes');
-
-    tabela.appendChild(pacienteTr); 
+    adicionaPacienteNaTabela(paciente);
 
     form.reset();
 });
@@ -96,4 +93,11 @@ function exibeMensagensDeErro(erros)  {
         li.textContent = erro;
         ul.appendChild(li);
     });
+}
+
+function adicionaPacienteNaTabela(paciente) {
+    var pacienteTr = montaTr(paciente);
+    var tabela = document.querySelector('#tabela-pacientes');
+
+    tabela.appendChild(pacienteTr); 
 }

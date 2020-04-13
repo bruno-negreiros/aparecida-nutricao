@@ -9,7 +9,9 @@ botaoBuscar.addEventListener('click', function(){
         var resposta = xhr.responseText;
         var pacientes = JSON.parse(resposta);
 
-        console.log(pacientes);
+        pacientes.forEach(paciente => {
+            adicionaPacienteNaTabela(paciente);
+        });
     });
 
     xhr.send();
